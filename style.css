@@ -10,9 +10,41 @@ body {
 header {
   background: #333;
   color: #fff;
-  padding: 16px;
-  text-align: center;
-  font-family: 'Exo 2', sans-serif;
+  padding: 16px 0;
+  font-family: 'Exo 2', sans-serif; 
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
 }
 
 h1, h2, h3 {
@@ -129,7 +161,7 @@ a:hover {
 }
 
 /* Responsive Design @media basically overrides once the the screen falls below the specified width */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   h1 {
     font-size: 24px;
   }
@@ -140,6 +172,18 @@ a:hover {
 
   p {
     margin-bottom: 18px;
+  }
+  
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 8px;
   }
 
 }

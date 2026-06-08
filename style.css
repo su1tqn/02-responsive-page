@@ -127,3 +127,19 @@ a:hover {
   width: 100%;
   height: auto;
 }
+
+/* Responsive Design @media basically overrides once the the screen falls below the specified width */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2, #featured-article h2 {
+    font-size: 22px;
+  }
+
+  p {
+    margin-bottom: 18px;
+  }
+
+}
